@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Little Legends Learning Loft | Childcare in Quincy, FL</title>
+<meta property="og:image" content="https://legendschildcare.com/images/og-thumbnail.jpg">
+<meta property="og:image:width" content="1000">
+<meta property="og:image:height" content="525">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://legendschildcare.com/images/og-thumbnail.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+.hero-rich {
+  position: relative;
+  background: url('images/hero-home.jpg') center 20% / cover no-repeat;
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 40px 5% 0;
+}
+.hero-rich .rainbow-title {
+  font-size: clamp(3rem, 9vw, 5.5rem);
+  margin-top: 10px;
+  text-shadow: none;
+}
+.tagline-banner {
+  background: linear-gradient(90deg, var(--pink), var(--purple), var(--blue));
+  text-align: center;
+  padding: 22px 5%;
+}
+.tagline-banner .hero-below-btn {
+  margin-top: 14px;
+  display: inline-block;
+  font-size: 1.15rem;
+  padding: 14px 40px;
+}
+.tagline-banner p {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: 0;
+  text-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+}
+/* SECTION HEADERS - clean, bold, colorful */
+.section-title {
+  font-size: clamp(2.4rem, 7vw, 3.8rem);
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 32px;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  padding: 0 10px;
+}
+.section-title .w-pink { color: #F0449E; }
+.section-title .w-blue { color: #2B9FE3; }
+.section-title .w-green { color: #4CAF50; }
+.section-title .w-purple { color: #9B5DE5; }
+.section-title .w-orange { color: #FF8C42; }
+/* TOP WAITLIST CTA - impossible to miss */
+.waitlist-hero-cta {
+  background: linear-gradient(135deg, #F0449E, #D12B84 60%, #9B5DE5);
+  margin: 0;
+  padding: 40px 6%;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  border-top: 6px solid #FFC93C;
+  border-bottom: 6px solid #2B9FE3;
+}
+.waitlist-hero-cta h2 {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 900;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg,#FFC93C,#7BC950,#2B9FE3,#fff,#F0449E);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(2px 3px 0 rgba(0,0,0,0.35)) drop-shadow(4px 6px 0 rgba(0,0,0,0.15));
+  letter-spacing: 1px;
+}
+.waitlist-hero-cta p {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 22px;
+  text-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+}
+.waitlist-hero-cta .btn {
+  font-size: 1.3rem;
+  padding: 16px 48px;
+  background: #2B9FE3;
+  box-shadow: 0 6px 0 #1B7FC1, 0 10px 20px rgba(0,0,0,0.3);
+}
+.waitlist-hero-cta .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 0 #1B7FC1, 0 14px 24px rgba(0,0,0,0.3);
+}
+/* RAINBOW DIVIDERS */
+.rainbow-divider {
+  height: 12px;
+  background: linear-gradient(90deg,#F0449E,#FF8C42,#FFC93C,#7BC950,#2B9FE3,#9B5DE5,#F0449E);
+  border: none;
+  margin: 0;
+}
+/* FLOATING ANIMATIONS */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+.feature-card .icon {
+  animation: float 3s ease-in-out infinite;
+}
+.feature-card:nth-child(2) .icon { animation-delay: 0.5s; }
+.feature-card:nth-child(3) .icon { animation-delay: 1s; }
+.paw { animation: wiggle 2.5s ease-in-out infinite; }
+/* 3D AGE CARDS */
+.card-grid .card {
+  transition: transform 0.2s;
+}
+.card-grid .card:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+.card-grid .card h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  filter: drop-shadow(1px 2px 0 rgba(0,0,0,0.1));
+}
+/* POPPING REFER BANNER */
+.refer-promo {
+  background: linear-gradient(135deg, #7BC950, #2B9FE3);
+  border-radius: 32px;
+  margin: 48px 4%;
+  padding: 44px 6%;
+  text-align: center;
+  color: #fff;
+  border: 6px solid #FFC93C;
+  box-shadow: 0 16px 0 rgba(26,43,87,0.1), 0 30px 60px rgba(123,201,80,0.3);
+  position: relative;
+  overflow: hidden;
+}
+.refer-promo h2 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 900;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg,#fff,#FFC93C,#fff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(2px 3px 0 rgba(0,0,0,0.3));
+}
+.refer-promo p {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-shadow: 1px 2px 3px rgba(0,0,0,0.25);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.refer-promo .btn {
+  font-size: 1.15rem;
+  padding: 14px 40px;
+  background: #F0449E;
+  box-shadow: 0 6px 0 #C22773, 0 10px 20px rgba(0,0,0,0.3);
+}
+/* ALTERNATING SECTION BACKGROUNDS */
+.section-alt {
+  background: linear-gradient(180deg, #FFF9F0, #FFF0F5);
+  border-top: 4px dashed #FFC93C;
+  border-bottom: 4px dashed #FFC93C;
+}
+@media (max-width: 768px) {
+  .hero-rich {
+    background: url('images/hero-home.jpg') center / contain no-repeat #87CEEB;
+    min-height: 230px;
+  }
+  .tagline-banner .hero-below-btn {
+    font-size: 1rem;
+    padding: 12px 32px;
+  }
+  .tagline-banner p { font-size: 1.1rem; }
+}
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: -60px;
+  position: relative;
+  z-index: 5;
+  padding: 0 6%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.feature-card {
+  background: #fff;
+  border-radius: 28px;
+  padding: 36px 24px 30px;
+  text-align: center;
+  box-shadow: 0 12px 0 rgba(26,43,87,0.08), 0 20px 44px rgba(26,43,87,0.16);
+  border: 4px solid #F0E6FF;
+  transition: transform 0.2s;
+}
+.feature-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 0 rgba(26,43,87,0.08), 0 28px 54px rgba(26,43,87,0.2);
+}
+.feature-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg,#F0449E,#FF8C42,#FFC93C,#7BC950,#2B9FE3,#9B5DE5);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  font-weight: 900;
+  filter: drop-shadow(1px 2px 0 rgba(26,43,87,0.15));
+}
+.feature-card .icon { font-size: 3.8rem; margin-bottom: 14px; filter: drop-shadow(2px 3px 2px rgba(0,0,0,0.15)); }
+.feature-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg,#F0449E,#FF8C42,#FFC93C,#7BC950,#2B9FE3,#9B5DE5);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  font-weight: 900;
+}
+.feature-card p { color: #555; font-size: 1rem; }
+.welcome-flow {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+}
+.welcome-flow p { margin-bottom: 20px; }
+.welcome-flow .big-close {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--navy);
+  margin-top: 28px;
+}
+.waitlist-banner {
+  background: linear-gradient(135deg, #F0449E, #D12B84 60%, #9B5DE5);
+  border-radius: 32px;
+  margin: 48px 4%;
+  padding: 50px 6%;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  border: 6px solid #FFC93C;
+  box-shadow: 0 16px 0 rgba(26,43,87,0.1), 0 30px 60px rgba(240,68,158,0.3);
+}
+.waitlist-banner h2 {
+  font-size: clamp(2.2rem, 7vw, 3.5rem);
+  font-weight: 900;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg,#FFC93C,#7BC950,#2B9FE3,#fff,#F0449E);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(2px 3px 0 rgba(0,0,0,0.35)) drop-shadow(4px 6px 0 rgba(0,0,0,0.15));
+}
+.waitlist-banner p { font-size: 1.25rem; font-weight: 700; margin-bottom: 22px; text-shadow: 1px 2px 3px rgba(0,0,0,0.3); }
+.waitlist-banner .btn {
+  font-size: 1.2rem;
+  padding: 15px 44px;
+  background: #2B9FE3;
+  box-shadow: 0 6px 0 #1B7FC1, 0 10px 20px rgba(0,0,0,0.3);
+}
+.paw { position: absolute; font-size: 2rem; opacity: 0.35; }
+
+/* STICKY MOBILE CTA */
+.sticky-cta {
+  display: none;
+}
+@media (max-width: 768px) {
+  .sticky-cta {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-top: 3px solid #F0449E;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+  }
+  .sticky-cta a {
+    display: block;
+    text-align: center;
+    background: linear-gradient(135deg, #F0449E, #D12B84);
+    color: #fff;
+    font-weight: 900;
+    font-size: 1.1rem;
+    padding: 14px;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 4px 0 #A81E63;
+  }
+  body { padding-bottom: 76px; }
+}
+
+/* MEALS BANNER */
+.meals-banner {
+  background: linear-gradient(135deg, #FFC93C, #FF8C42);
+  border-radius: 28px;
+  margin: 40px 6%;
+  padding: 32px 6%;
+  text-align: center;
+  color: #1a2b57;
+  border: 4px solid #fff;
+  box-shadow: 0 12px 32px rgba(255,140,66,0.3);
+}
+.meals-banner h3 {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 900;
+  margin: 8px 0;
+  color: #1a2b57;
+}
+.meals-banner p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* PLAYFUL FONTS */
+body { font-family: 'Nunito', sans-serif; }
+h1, h2, h3, .section-title, .btn {
+  font-family: 'Baloo 2', cursive;
+}
+
+.tagline-gradient-banner {
+  text-align: center;
+  padding: 36px 5% 40px;
+  background: linear-gradient(135deg, #F0449E 0%, #9B5DE5 50%, #2B9FE3 100%);
+}
+.tagline-gradient-banner p {
+  font-family: 'Baloo 2', cursive;
+  font-size: clamp(1.4rem, 5vw, 2rem);
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 20px 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+.tagline-gradient-banner .tagline-btn {
+  font-size: 1.2rem;
+  padding: 16px 48px;
+  background: #F0449E;
+  box-shadow: 0 5px 0 #C2185B;
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="index.html"><img src="images/logo-transparent.png" alt="Little Legends Learning Loft logo"></a>
+  <nav class="nav-pills">
+    <a href="index.html" class="active">Home</a>
+    <a href="pages/the-heart-of-the-loft.html">The Heart of the Loft</a>
+    <a href="pages/why-choose-us.html">Why Choose Us</a>
+    <a href="pages/join-our-legend-family.html">Join Our Legend Family</a>
+    <a href="pages/parent-hub.html">Parent Hub</a>
+    <a href="pages/connect-with-the-loft.html">Connect With The Loft</a>
+  </nav>
+</header>
+
+<section class="hero-rich">
+</section>
+
+<div class="tagline-gradient-banner">
+  <p>From First Steps to Lifelong Success</p>
+  <a class="btn tagline-btn" href="pages/why-choose-us.html">Explore Our Programs</a>
+</div>
+
+<div class="waitlist-hero-cta">
+  <span class="paw" style="top:14px;left:5%">🐾</span>
+  <span class="paw" style="top:18px;right:6%">🐾</span>
+  <span class="paw" style="bottom:14px;left:10%">🐾</span>
+  <span class="paw" style="bottom:16px;right:8%">🐾</span>
+  <h2>Join the Waitlist</h2>
+  <p>Reserve your spot today, limited enrollment available!</p>
+  <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfEeECOso2xLIdRBXrT4ecdueRKcd7nDfP3QW9VJtN2F06xbg/viewform" target="_blank" rel="noopener">Sign Up Now</a>
+</div>
+
+<hr class="rainbow-divider">
+
+<section class="section section-alt">
+  <div class="welcome-flow">
+    <h2 class="section-title">🌟 <span class="w-pink">Welcome</span> <span class="w-blue">to</span> <span class="w-blue">the</span> <span class="w-purple">Family!</span> 🌟</h2>
+    <p>At Little Legends Learning Loft, we believe every child has a story waiting to be written, and every great story begins with love, encouragement, and opportunity. Our Legend Mentors don&rsquo;t just watch children, they guide, inspire, and celebrate them daily.</p>
+    <p>Together with our families, we are building confident, curious, and kind Little Legends who are ready to shine in school and in life.</p>
+  </div>
+</section>
+
+<div class="feature-cards">
+  <div class="feature-card">
+    <div class="icon">🛡️</div>
+    <h3>Watch Over Them</h3>
+    <p>Imagine dropping off your little one with <strong>zero worry</strong>. Peek in anytime with live cameras, and know they're with people who genuinely love what they do. That's the peace of mind every parent deserves, and every Legend family gets.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">🧩</div>
+    <h3>Learning Through Play</h3>
+    <p>Your child won't just be watched, they'll <strong>thrive</strong>. Confidence, curiosity, kindness: the traits that set kids up for life, built through play they'll love. We don't do average, and neither will your little legend.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">💝</div>
+    <h3>Teachers Who Truly Care</h3>
+    <p>Your child will be <strong>seen, known, and celebrated</strong> for exactly who they are. Our mentors don't just supervise, they champion every little personality. When your child walks in, they belong. When you walk in, you're family.</p>
+  </div>
+</div>
+
+<div class="meals-banner">
+  <span style="font-size:2.5rem">🍎</span>
+  <h3>Breakfast, Lunch &amp; Snack Included</h3>
+  <p>Nutritious breakfast, lunch, and snack served fresh every day. The lunchbox stays home.</p>
+</div>
+
+<hr class="rainbow-divider">
+<section class="section">
+  <div class="welcome-flow">
+    <p>We know raising a legend takes a village. At Little Legends, we partner with families every step of the way. Open communication, parent involvement, and mutual respect create a true community where families feel connected and supported.</p>
+    <p class="big-close">We&rsquo;re not just shaping childhood, we&rsquo;re building LEGENDS!</p>
+  </div>
+</section>
+
+
+<section class="section">
+  <h2 class="section-title">✨ The <span class="w-pink">Loft</span> <span class="w-blue">Difference</span> ✨</h2>
+  <div class="card-grid">
+    <div class="card pink">
+      <div style="font-size:2.5rem;margin-bottom:8px">📹</div>
+      <h3>WatchMeGrow Cameras</h3>
+      <p>Check in on your little one with secure weekly camera access. Peace of mind, on your schedule.</p>
+    </div>
+    <div class="card yellow">
+      <div style="font-size:2.5rem;margin-bottom:8px">📚</div>
+      <h3>Experience Curriculum</h3>
+      <p>A research-backed curriculum that makes learning feel like play, from infants to school-age.</p>
+    </div>
+    <div class="card blue">
+      <div style="font-size:2.5rem;margin-bottom:8px">⏰</div>
+      <h3>6AM to 6PM Hours</h3>
+      <p>Extended hours for working families. Early drop-off, late pickup, and one less thing to stress about.</p>
+    </div>
+    <div class="card purple">
+      <div style="font-size:2.5rem;margin-bottom:8px">📱</div>
+      <h3>Brightwheel Updates</h3>
+      <p>Photos, messages, and daily reports sent straight to your phone. Their whole day, delivered to you.</p>
+    </div>
+    <div class="card pink">
+      <div style="font-size:2.5rem;margin-bottom:8px">🎒</div>
+      <h3>Legend Essentials</h3>
+      <p>Our optional add-on package provides diapers and wipes while your child is in our care. One less thing to remember, one less bag to pack. Ask us about pricing!</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rainbow-divider">
+<section class="section">
+  <h2 class="section-title">🚀 <span class="w-green">Legendary</span> <span class="w-orange">Learning</span> <span class="w-blue">for</span> <span class="w-pink">Every</span> <span class="w-purple">Stage</span> 🎨</h2>
+  <div class="card-grid">
+    <div class="card pink">
+      <h3>Infant Legends</h3>
+      <p><strong>6 weeks to 12 months</strong></p>
+      <p>A warm, caring start with plenty of snuggles, sensory play, and safe exploration.</p>
+    </div>
+    <div class="card yellow">
+      <h3>Toddler Legends</h3>
+      <p><strong>1 to 2 years</strong></p>
+      <p>Busy little hands, curious minds, our toddler program sparks imagination and social skills.</p>
+    </div>
+    <div class="card purple">
+      <h3>Preschool Legends</h3>
+      <p><strong>3 to 4 years</strong></p>
+      <p>Preparing for kindergarten through creativity, pre-literacy, and problem-solving adventures.</p>
+    </div>
+    <div class="card blue">
+      <h3>School-Age Legends</h3>
+      <p><strong>5 to 12 years</strong></p>
+      <p>Before- and after-school support with homework help, enrichment, and leadership activities.</p>
+    </div>
+  </div>
+</section>
+
+<div class="refer-promo">
+  <h2>Refer a Legend</h2>
+  <p>Know a family looking for childcare? Send them our way. When they enroll and complete their first month, you earn $50. Enrolled families get a $50 tuition credit. Grandparents, friends, and neighbors get a $50 gift card. No cap. No limit. Just our way of saying thank you for helping our village grow.</p>
+  <form id="refer-form" style="max-width:520px;margin:24px auto 0;text-align:left">
+    <label for="ref-your-name" style="display:block;font-weight:700;margin-bottom:4px">Your Name</label>
+    <input type="text" id="ref-your-name" name="referrer-name" required style="width:100%;padding:10px;border-radius:10px;border:2px solid #fff;margin-bottom:12px">
+    <label for="ref-your-phone" style="display:block;font-weight:700;margin-bottom:4px">Your Phone</label>
+    <input type="tel" id="ref-your-phone" name="referrer-phone" required style="width:100%;padding:10px;border-radius:10px;border:2px solid #fff;margin-bottom:12px">
+    <label for="ref-friend-name" style="display:block;font-weight:700;margin-bottom:4px">Friend's Name</label>
+    <input type="text" id="ref-friend-name" name="friend-name" required style="width:100%;padding:10px;border-radius:10px;border:2px solid #fff;margin-bottom:12px">
+    <label for="ref-friend-email" style="display:block;font-weight:700;margin-bottom:4px">Friend's Email</label>
+    <input type="email" id="ref-friend-email" name="email" required style="width:100%;padding:10px;border-radius:10px;border:2px solid #fff;margin-bottom:16px">
+    <div style="text-align:center">
+      <button type="submit" class="btn" style="border:none;cursor:pointer">Send Referral</button>
+    </div>
+  </form>
+  <script>
+  document.getElementById('refer-form').addEventListener('submit', function(ev) {
+    ev.preventDefault();
+    var form = ev.target;
+    fetch('https://script.google.com/macros/s/AKfycbysWOjmKkE1sJ8gk_jiuOg400Mg2GnmxnP1AaCpkb0e7-DQby0ADy1iXepJjhk22A8hsg/exec', {
+      method: 'POST',
+      mode: 'no-cors',
+      body: new FormData(form)
+    }).then(function() {
+      window.location.href = 'pages/thank-you.html';
+    }).catch(function() {
+      window.location.href = 'pages/thank-you.html';
+    });
+  });
+  </script>
+  <p style="font-size:0.8rem;opacity:0.85;margin-top:12px;line-height:1.5">Referrer must be named at the time of enrollment. Retroactive claims cannot be honored. The $50 reward is issued after the referred family completes their first full month of care. Enrolled families receive a $50 tuition credit. Community referrers receive a $50 gift card. No limit on referrals.</p>
+</div>
+
+<div class="waitlist-banner">
+  <span class="paw" style="top:18px;left:6%">🐾</span>
+  <span class="paw" style="top:24px;right:8%">🐾</span>
+  <span class="paw" style="bottom:20px;left:12%">🐾</span>
+  <span class="paw" style="bottom:26px;right:6%">🐾</span>
+  <h2>Join the Waitlist</h2>
+  <p>Reserve your spot today, limited enrollment available!</p>
+  <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfEeECOso2xLIdRBXrT4ecdueRKcd7nDfP3QW9VJtN2F06xbg/viewform" target="_blank" rel="noopener">Sign Up Now</a>
+</div>
+
+<footer class="site-footer">
+  803 E. Jefferson Street, Quincy, FL 32351 &nbsp;•&nbsp;
+  <a href="mailto:Leadership@littlelegendsloft.com">Leadership@littlelegendsloft.com</a> &nbsp;•&nbsp;
+  850.627.4061<br>
+  ©2026 Little Legends Learning Loft, Inc. All Rights Reserved.<br>
+  Part of the McMillon Global Enterprises Family of Organizations
+<div class="social-links">
+    <a href="https://www.facebook.com/share/1BAZdCDmKt/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Follow us on Facebook" style="display:inline-block;margin:0 8px"><svg width="28" height="28" viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    <a href="https://www.instagram.com/littlelegends_1/" target="_blank" rel="noopener" aria-label="Follow us on Instagram" style="display:inline-block;margin:0 8px"><svg width="28" height="28" viewBox="0 0 24 24" fill="#E4405F" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfEeECOso2xLIdRBXrT4ecdueRKcd7nDfP3QW9VJtN2F06xbg/viewform" target="_blank" rel="noopener">🐾 Join the Waitlist</a>
+</div>
+</body>
+</body>
+</html>
