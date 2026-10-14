@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Little Legends Learning Loft | Childcare in Quincy, FL</title>
+<meta name="description" content="Little Legends Learning Loft in Quincy, FL: where every child is celebrated, inspired, and empowered. Infant through school-age care with parent cameras, meals included, and enrichment built into tuition. Join the waitlist today.">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.jpg">
 <meta property="og:image" content="https://legendschildcare.com/images/og-thumbnail.jpg">
 <meta property="og:image:width" content="1000">
 <meta property="og:image:height" content="525">
@@ -19,16 +23,38 @@
   background: url('images/hero-home.jpg') center 20% / cover no-repeat;
   min-height: 560px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   text-align: center;
-  padding: 40px 5% 0;
+  padding: 60px 5%;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(26,43,87,0.45) 0%, rgba(26,43,87,0.25) 45%, rgba(26,43,87,0.55) 100%);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
 }
 .hero-rich .rainbow-title {
-  font-size: clamp(3rem, 9vw, 5.5rem);
-  margin-top: 10px;
-  text-shadow: none;
+  font-size: clamp(2.8rem, 8vw, 5rem);
+  margin-bottom: 16px;
+  filter: drop-shadow(2px 4px 0 rgba(0,0,0,0.35)) drop-shadow(4px 8px 0 rgba(0,0,0,0.15));
+}
+.hero-sub {
+  color: #fff;
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  font-weight: 700;
+  margin-bottom: 26px;
+  text-shadow: 1px 2px 4px rgba(0,0,0,0.5);
+}
+.hero-btn {
+  font-size: 1.25rem;
+  padding: 16px 52px;
+  background: #F0449E;
+  box-shadow: 0 6px 0 #C22773, 0 12px 24px rgba(0,0,0,0.35);
 }
 .tagline-banner {
   background: linear-gradient(90deg, var(--pink), var(--purple), var(--blue));
@@ -374,12 +400,13 @@ h1, h2, h3, .section-title, .btn {
 </header>
 
 <section class="hero-rich">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="rainbow-title">From First Steps<br>to Lifelong Success</h1>
+    <p class="hero-sub">Quincy's newest childcare family, where every child is seen, known, and celebrated.</p>
+    <a class="btn hero-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfEeECOso2xLIdRBXrT4ecdueRKcd7nDfP3QW9VJtN2F06xbg/viewform" target="_blank" rel="noopener">Join the Waitlist</a>
+  </div>
 </section>
-
-<div class="tagline-gradient-banner">
-  <p>From First Steps to Lifelong Success</p>
-  <a class="btn tagline-btn" href="pages/why-choose-us.html">Explore Our Programs</a>
-</div>
 
 <div class="waitlist-hero-cta">
   <span class="paw" style="top:14px;left:5%">🐾</span>
@@ -387,7 +414,7 @@ h1, h2, h3, .section-title, .btn {
   <span class="paw" style="bottom:14px;left:10%">🐾</span>
   <span class="paw" style="bottom:16px;right:8%">🐾</span>
   <h2>Join the Waitlist</h2>
-  <p>Reserve your spot today, limited enrollment available!</p>
+  <p>Spots are limited. Join the waitlist today and we'll reach out the moment your child's space is ready.</p>
   <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfEeECOso2xLIdRBXrT4ecdueRKcd7nDfP3QW9VJtN2F06xbg/viewform" target="_blank" rel="noopener">Sign Up Now</a>
 </div>
 
@@ -467,6 +494,38 @@ h1, h2, h3, .section-title, .btn {
 
 <hr class="rainbow-divider">
 <section class="section">
+  <h2 class="section-title">👀 <span class="w-pink">Step</span> <span class="w-blue">Inside</span> <span class="w-purple">the Loft</span></h2>
+  <p style="text-align:center;max-width:680px;margin:0 auto 30px;font-size:1.1rem">No stock photos. No surprises. These are real views from inside the Loft, including actual stills from our parent cameras, so you can see exactly how clear your view will be when you check in on your little legend.</p>
+  <div class="card-grid">
+    <div class="card pink" style="padding:12px">
+      <img src="images/mural-lobby.jpg" alt="Little Legends Learning Loft lobby mural with Kash the lion cub" style="width:100%;border-radius:16px">
+      <p style="margin-top:10px;font-weight:700">Our lobby mural, the first thing your little legend sees</p>
+    </div>
+    <div class="card blue" style="padding:12px">
+      <img src="images/classroom-camera-1.jpg" alt="Classroom camera view of circle time rug and reading corner" style="width:100%;border-radius:16px">
+      <p style="margin-top:10px;font-weight:700">Parent camera view: circle time and reading corner</p>
+    </div>
+    <div class="card yellow" style="padding:12px">
+      <img src="images/classroom-camera-2.jpg" alt="Classroom camera view of tables and learning centers" style="width:100%;border-radius:16px">
+      <p style="margin-top:10px;font-weight:700">Parent camera view: classroom learning centers</p>
+    </div>
+    <div class="card purple" style="padding:12px">
+      <img src="images/dramatic-play-camera.jpg" alt="Classroom camera view of dramatic play area" style="width:100%;border-radius:16px">
+      <p style="margin-top:10px;font-weight:700">Parent camera view: dramatic play area</p>
+    </div>
+    <div class="card green" style="padding:12px">
+      <img src="images/infant-room-camera.jpg" alt="Infant room camera view with cribs and play area" style="width:100%;border-radius:16px">
+      <p style="margin-top:10px;font-weight:700">Parent camera view: infant room</p>
+    </div>
+  </div>
+  <p style="text-align:center;max-width:640px;margin:24px auto 0;font-size:0.95rem;color:#666;font-style:italic">Diaper changing areas are blacked out on camera for your child's privacy. Everything else, you see what we see.</p>
+  <div style="text-align:center;margin-top:24px">
+    <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfEeECOso2xLIdRBXrT4ecdueRKcd7nDfP3QW9VJtN2F06xbg/viewform" target="_blank" rel="noopener">Join the Waitlist</a>
+  </div>
+</section>
+
+<hr class="rainbow-divider">
+<section class="section">
   <h2 class="section-title">🚀 <span class="w-green">Legendary</span> <span class="w-orange">Learning</span> <span class="w-blue">for</span> <span class="w-pink">Every</span> <span class="w-purple">Stage</span> 🎨</h2>
   <p style="text-align:center;max-width:640px;margin:0 auto 30px;font-size:1.1rem">From first snuggles to school-age leadership, every age has its own adventure at the Loft.</p>
   <div class="card-grid">
@@ -528,7 +587,7 @@ h1, h2, h3, .section-title, .btn {
 
 <footer class="site-footer">
   803 E. Jefferson Street, Quincy, FL 32351 &nbsp;•&nbsp;
-  <a href="mailto:Leadership@littlelegendsloft.com">Leadership@littlelegendsloft.com</a> &nbsp;•&nbsp;
+  <a href="mailto:leadership@littlelegendsloft.com">leadership@littlelegendsloft.com</a> &nbsp;•&nbsp;
   850.627.4061<br>
   Mon – Fri: 6:00 AM – 6:00 PM<br>
   ©2026 Little Legends Learning Loft, Inc. All Rights Reserved.<br>
