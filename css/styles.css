@@ -277,3 +277,67 @@ h1, h2, h3, .section-title, .btn {
   .nav-pills a { padding: 10px 16px; font-size: 0.9rem; text-align: center; }
   .site-header .logo img { height: 110px; }
 }
+
+/* FAQ ACCORDION */
+.faq-list { max-width: 720px; margin: 0 auto; }
+.faq-item {
+  background: #fff;
+  border-radius: 18px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 16px rgba(26,43,87,0.1);
+  overflow: hidden;
+  border: 2px solid #F0E6FF;
+}
+.faq-q {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 20px 24px;
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--navy);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.faq-q .faq-icon { font-size: 1.4rem; color: var(--pink); flex-shrink: 0; transition: transform 0.2s; }
+.faq-item.open .faq-q .faq-icon { transform: rotate(45deg); }
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 24px;
+}
+.faq-item.open .faq-a { max-height: 300px; padding-bottom: 20px; }
+.faq-a p { color: #555; font-size: 1.02rem; line-height: 1.7; margin: 0; }
+
+/* TESTIMONIALS */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.testimonial-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 30px 26px;
+  box-shadow: 0 8px 24px rgba(26,43,87,0.12);
+  border: 3px solid #FFE3F1;
+  position: relative;
+}
+.testimonial-card .stars { color: #FFB800; font-size: 1.3rem; margin-bottom: 12px; letter-spacing: 2px; }
+.testimonial-card blockquote {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #444;
+  line-height: 1.7;
+  margin: 0 0 14px;
+}
+.testimonial-card .t-name { font-weight: 800; color: var(--navy); }
+.testimonial-card .t-role { font-size: 0.9rem; color: #888; }
