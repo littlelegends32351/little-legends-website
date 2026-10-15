@@ -168,51 +168,11 @@
 
 <hr class="rainbow-divider">
 <section class="section section-alt">
-  <h2 class="section-title">💬 <span class="w-pink">What Our</span> <span class="w-purple">Village Says</span></h2>
-  <p style="text-align:center;max-width:640px;margin:0 auto 30px;font-size:1.1rem">Our founding families are just getting started. Check back soon to hear from them, or share your own experience below.</p>
-  <div class="testimonial-grid" id="testimonial-grid">
+  <h2 class="section-title">⭐ <span class="w-pink">What Our</span> <span class="w-purple">Village Says</span></h2>
+  <p style="text-align:center;max-width:640px;margin:0 auto 30px;font-size:1.1rem">Our founding families are just getting started. Soon you'll find their honest reviews here, straight from Google, where every family can share their real experience.</p>
+  <div style="text-align:center">
+    <p style="font-size:1.05rem;color:#555;max-width:520px;margin:0 auto">Already part of the village? We'd love to hear from you on Google.</p>
   </div>
-  <div style="max-width:620px;margin:36px auto 0">
-    <h3 style="text-align:center;color:var(--navy);margin-bottom:16px">Share Your Experience</h3>
-    <form id="testimonial-form" class="native-form" style="background:#fff;border-color:#FFE3F1">
-      <label for="t-name" style="color:var(--navy)">Your Name</label>
-      <input type="text" id="t-name" name="name" required placeholder="Your full name" style="border-color:#E2E8F0">
-      <label for="t-email" style="color:var(--navy)">Email (not published)</label>
-      <input type="email" id="t-email" name="email" required placeholder="you@example.com" style="border-color:#E2E8F0">
-      <label for="t-text" style="color:var(--navy)">Your Testimonial</label>
-      <textarea id="t-text" name="testimonial" required rows="4" placeholder="Tell us about your Little Legends experience..." style="border:2px solid #E2E8F0;border-radius:12px"></textarea>
-      <div style="text-align:center;margin-top:18px">
-        <button type="submit" class="btn" style="border:none;cursor:pointer">Submit Testimonial</button>
-      </div>
-      <p class="form-note" style="color:#888">Testimonials are reviewed before being published.</p>
-    </form>
-  </div>
-  <script>
-  document.querySelectorAll('.faq-q').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      var item = btn.closest('.faq-item');
-      var wasOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(function(i) { i.classList.remove('open'); });
-      if (!wasOpen) item.classList.add('open');
-    });
-  });
-  document.getElementById('testimonial-form').addEventListener('submit', function(ev) {
-    ev.preventDefault();
-    var form = ev.target;
-    var btn = form.querySelector('button[type="submit"]');
-    btn.disabled = true;
-    btn.textContent = 'Submitting...';
-    fetch('TESTIMONIAL_SCRIPT_URL', {
-      method: 'POST',
-      mode: 'no-cors',
-      body: new FormData(form)
-    }).then(function() {
-      form.innerHTML = '<p style="text-align:center;font-size:1.2rem;font-weight:700;color:var(--navy);padding:20px">Thank you! Your testimonial is under review.</p>';
-    }).catch(function() {
-      form.innerHTML = '<p style="text-align:center;font-size:1.2rem;font-weight:700;color:var(--navy);padding:20px">Thank you! Your testimonial is under review.</p>';
-    });
-  });
-  </script>
 </section>
 
 
