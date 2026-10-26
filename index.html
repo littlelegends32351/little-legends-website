@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Little Legends Learning Loft | Childcare in Quincy, FL</title>
 <meta name="description" content="Little Legends Learning Loft in Quincy, FL: where every child is celebrated, inspired, and empowered. Infant through school-age care with parent cameras, meals included, and enrichment built into tuition. Join the waitlist today.">
-<link rel="icon" type="image/x-icon" href="images/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
-<link rel="apple-touch-icon" href="images/apple-touch-icon.jpg">
+<link rel="icon" type="image/x-icon" href="https://legendschildcare.com/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="https://legendschildcare.com/images/favicon-32.png">
+<link rel="apple-touch-icon" href="https://legendschildcare.com/images/apple-touch-icon.jpg">
 <meta property="og:image" content="https://legendschildcare.com/images/og-thumbnail.jpg">
 <meta property="og:image:width" content="1000">
 <meta property="og:image:height" content="525">
@@ -20,7 +20,7 @@
 <style>
 .hero-rich {
   position: relative;
-  background: url('images/hero-home.jpg') center 20% / cover no-repeat;
+  background: url('https://legendschildcare.com/images/hero-home.jpg') center 20% / cover no-repeat;
   min-height: 560px;
   display: flex;
   align-items: center;
@@ -208,7 +208,7 @@
 }
 @media (max-width: 768px) {
   .hero-rich {
-    background: url('images/hero-home.jpg') center / cover no-repeat;
+    background: url('https://legendschildcare.com/images/hero-home.jpg') center / cover no-repeat;
     min-height: 480px;
   }
   .tagline-banner .hero-below-btn {
@@ -432,12 +432,36 @@ h1, h2, h3, .section-title, .btn {
   font-weight: 400;
 }
 .native-form button:disabled { opacity: 0.6; cursor: wait; }
+.waitlist-cta-panel {
+  max-width: 620px;
+  margin: 28px auto 0;
+  background: rgba(255,255,255,0.12);
+  border-radius: 24px;
+  padding: 36px 32px;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+.waitlist-cta-copy {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 24px;
+  text-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+}
+.waitlist-cta-panel .form-note {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-top: 18px;
+  color: #fff;
+  font-weight: 600;
+}
 </style>
 </head>
 <body>
 
 <header class="site-header">
-  <a class="logo" href="index.html"><img src="images/logo-transparent.png" alt="Little Legends Learning Loft logo"></a>
+  <a class="logo" href="index.html"><img src="https://legendschildcare.com/images/logo-transparent.png" alt="Little Legends Learning Loft logo"></a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu" tabindex="0"><span></span></label>
   <nav class="nav-pills">
     <a href="index.html" class="active">Home</a>
     <a href="pages/the-heart-of-the-loft.html">The Heart of the Loft</a>
@@ -463,62 +487,11 @@ h1, h2, h3, .section-title, .btn {
   <span class="paw" style="bottom:16px;right:8%">🐾</span>
   <h2>Join the Waitlist</h2>
   <p>Spots are limited. Join the waitlist today and we'll reach out the moment your child's space is ready.</p>
-  <form id="waitlist-form" class="native-form">
-    <div class="form-row">
-      <div>
-        <label for="wl-parent-name">Parent/Guardian Name</label>
-        <input type="text" id="wl-parent-name" name="parent-name" required placeholder="Your full name">
-      </div>
-      <div>
-        <label for="wl-phone">Phone</label>
-        <input type="tel" id="wl-phone" name="phone" required placeholder="(850) 555-0123">
-      </div>
-    </div>
-    <div class="form-row">
-      <div>
-        <label for="wl-email">Email</label>
-        <input type="email" id="wl-email" name="email" required placeholder="you@example.com">
-      </div>
-      <div>
-        <label for="wl-child-name">Child's Name</label>
-        <input type="text" id="wl-child-name" name="child-name" required placeholder="Child's first and last name">
-      </div>
-    </div>
-    <div class="form-row">
-      <div>
-        <label for="wl-dob">Child's Birthdate</label>
-        <input type="date" id="wl-dob" name="child-dob" required>
-      </div>
-      <div>
-        <label for="wl-start">Desired Start Date</label>
-        <input type="date" id="wl-start" name="start-date">
-      </div>
-    </div>
-    <label for="wl-hear">How did you hear about us?</label>
-    <input type="text" id="wl-hear" name="hear-about" placeholder="Friend, Facebook, drove by...">
-    <div style="text-align:center;margin-top:18px">
-      <button type="submit" class="btn" style="border:none;cursor:pointer">Sign Up Now</button>
-    </div>
-    <p class="form-note">Submitting this form does not guarantee enrollment. Our team will contact you to confirm availability.</p>
-  </form>
-  <script>
-  document.getElementById('waitlist-form').addEventListener('submit', function(ev) {
-    ev.preventDefault();
-    var form = ev.target;
-    var btn = form.querySelector('button[type="submit"]');
-    btn.disabled = true;
-    btn.textContent = 'Submitting...';
-    fetch('WAITLIST_SCRIPT_URL', {
-      method: 'POST',
-      mode: 'no-cors',
-      body: new FormData(form)
-    }).then(function() {
-      window.location.href = 'pages/thank-you.html';
-    }).catch(function() {
-      window.location.href = 'pages/thank-you.html';
-    });
-  });
-  </script>
+  <div class="waitlist-cta-panel">
+    <p class="waitlist-cta-copy">Join our official waitlist — it takes about two minutes, and your family will be contacted first when spots become available.</p>
+    <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfEeECOso2xLIdRBXrT4ecdueRKcd7nDfP3QW9VJtN2F06xbg/viewform" target="_blank" rel="noopener">Join the Waitlist</a>
+    <p class="form-note">Completing the form does not guarantee enrollment. Our team will reach out to confirm availability.</p>
+  </div>
 </div>
 
 <hr class="rainbow-divider">
@@ -535,7 +508,7 @@ h1, h2, h3, .section-title, .btn {
   <div class="feature-card">
     <div class="icon">🛡️</div>
     <h3>Watch Over Them</h3>
-    <p>Imagine dropping off your little one with <strong>zero worry</strong>. Check in with secure weekly camera viewing time, and know they're with people who genuinely love what they do. That's the peace of mind every parent deserves, and every Legend family gets.</p>
+    <p>Imagine dropping off your little one with <strong>zero worry</strong>. You'll check in with secure weekly camera viewing time, and know they're with people who genuinely love what they do. That's the peace of mind every parent deserves, and every Legend family gets.</p>
   </div>
   <div class="feature-card">
     <div class="icon">🧩</div>
@@ -552,7 +525,7 @@ h1, h2, h3, .section-title, .btn {
 <div class="meals-banner">
   <span style="font-size:2.5rem">🍎</span>
   <h3>Breakfast, Lunch &amp; Snack Included</h3>
-  <p>Nutritious breakfast, lunch, and snack served fresh every day. The lunchbox stays home.</p>
+  <p>Nutritious breakfast, lunch, and snack will be served fresh every day. The lunchbox stays home.</p>
 </div>
 
 <hr class="rainbow-divider">
@@ -570,7 +543,7 @@ h1, h2, h3, .section-title, .btn {
     <div class="card pink">
       <div style="font-size:2.5rem;margin-bottom:8px">📹</div>
       <h3>WatchMeGrow Cameras</h3>
-      <p>Check in on your little one with secure weekly camera access. Peace of mind, on your schedule.</p>
+      <p>You'll check in on your little one with secure weekly camera access. Peace of mind, on your schedule.</p>
     </div>
     <div class="card yellow">
       <div style="font-size:2.5rem;margin-bottom:8px">📚</div>
@@ -601,23 +574,19 @@ h1, h2, h3, .section-title, .btn {
   <p style="text-align:center;max-width:680px;margin:0 auto 30px;font-size:1.1rem">No stock photos. No surprises. These are real views from inside the Loft, including actual stills from our parent cameras, so you can see exactly how clear your view will be when you check in on your little legend.</p>
   <div class="card-grid">
     <div class="card pink" style="padding:12px">
-      <img src="images/mural-lobby.jpg" alt="Little Legends Learning Loft lobby mural with Kash the lion cub" style="width:100%;border-radius:16px">
+      <img src="https://legendschildcare.com/images/mural-lobby.jpg" alt="Little Legends Learning Loft lobby mural with Kash the lion cub" style="width:100%;border-radius:16px">
       <p style="margin-top:10px;font-weight:700">Our lobby mural, the first thing your little legend sees</p>
     </div>
     <div class="card blue" style="padding:12px">
-      <img src="images/classroom-camera-1.jpg" alt="Classroom camera view of circle time rug and reading corner" style="width:100%;border-radius:16px">
+      <img src="https://legendschildcare.com/images/classroom-camera-1.jpg" alt="Classroom camera view of circle time rug and reading corner" style="width:100%;border-radius:16px">
       <p style="margin-top:10px;font-weight:700">Parent camera view: circle time and reading corner</p>
     </div>
-    <div class="card yellow" style="padding:12px">
-      <img src="images/classroom-camera-2.jpg" alt="Classroom camera view of tables and learning centers" style="width:100%;border-radius:16px">
-      <p style="margin-top:10px;font-weight:700">Parent camera view: classroom learning centers</p>
-    </div>
     <div class="card purple" style="padding:12px">
-      <img src="images/dramatic-play-camera.jpg" alt="Classroom camera view of dramatic play area" style="width:100%;border-radius:16px">
+      <img src="https://legendschildcare.com/images/dramatic-play-camera.jpg" alt="Classroom camera view of dramatic play area" style="width:100%;border-radius:16px">
       <p style="margin-top:10px;font-weight:700">Parent camera view: dramatic play area</p>
     </div>
     <div class="card green" style="padding:12px">
-      <img src="images/infant-room-camera.jpg" alt="Infant room camera view with cribs and play area" style="width:100%;border-radius:16px">
+      <img src="https://legendschildcare.com/images/infant-room-camera.jpg" alt="Infant room camera view with cribs and play area" style="width:100%;border-radius:16px">
       <p style="margin-top:10px;font-weight:700">Parent camera view: infant room</p>
     </div>
   </div>
@@ -692,7 +661,7 @@ h1, h2, h3, .section-title, .btn {
   803 E. Jefferson Street, Quincy, FL 32351 &nbsp;•&nbsp;
   <a href="mailto:leadership@littlelegendsloft.com">leadership@littlelegendsloft.com</a> &nbsp;•&nbsp;
   850.627.4061<br>
-  Mon – Fri: 6:00 AM – 6:00 PM<br>
+  Opening Soon &middot; Planned Hours: Mon – Fri, 6:00 AM – 6:00 PM<br>
   ©2026 Little Legends Learning Loft, Inc. All Rights Reserved.<br>
   Part of the McMillon Global Enterprises Family of Businesses
 <div class="social-links">
