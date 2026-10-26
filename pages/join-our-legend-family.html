@@ -101,6 +101,40 @@
   </div>
 </section>
 
+<div class="refer-promo">
+  <h2>Refer a Legend</h2>
+  <p>Know a family looking for childcare? Send them our way. When they enroll and complete their first month, you earn $50. Enrolled families get a $50 tuition credit. Grandparents, friends, and neighbors get a $50 gift card. No cap. No limit. Just our way of saying thank you for helping our village grow.</p>
+  <form id="refer-form" style="max-width:520px;margin:24px auto 0;text-align:left">
+    <label for="ref-your-name" style="display:block;font-weight:700;margin-bottom:4px">Your Name</label>
+    <input type="text" id="ref-your-name" name="referrer-name" required style="width:100%;padding:10px;border-radius:10px;border:2px solid #fff;margin-bottom:12px">
+    <label for="ref-your-phone" style="display:block;font-weight:700;margin-bottom:4px">Your Phone</label>
+    <input type="tel" id="ref-your-phone" name="referrer-phone" required style="width:100%;padding:10px;border-radius:10px;border:2px solid #fff;margin-bottom:12px">
+    <label for="ref-friend-name" style="display:block;font-weight:700;margin-bottom:4px">Friend's Name</label>
+    <input type="text" id="ref-friend-name" name="friend-name" required style="width:100%;padding:10px;border-radius:10px;border:2px solid #fff;margin-bottom:12px">
+    <label for="ref-friend-email" style="display:block;font-weight:700;margin-bottom:4px">Friend's Email</label>
+    <input type="email" id="ref-friend-email" name="email" required style="width:100%;padding:10px;border-radius:10px;border:2px solid #fff;margin-bottom:16px">
+    <div style="text-align:center">
+      <button type="submit" class="btn" style="border:none;cursor:pointer">Send Referral</button>
+    </div>
+  </form>
+  <script>
+  document.getElementById('refer-form').addEventListener('submit', function(ev) {
+    ev.preventDefault();
+    var form = ev.target;
+    fetch('https://script.google.com/macros/s/AKfycbysWOjmKkE1sJ8gk_jiuOg400Mg2GnmxnP1AaCpkb0e7-DQby0ADy1iXepJjhk22A8hsg/exec', {
+      method: 'POST',
+      mode: 'no-cors',
+      body: new FormData(form)
+    }).then(function() {
+      window.location.href = 'thank-you.html';
+    }).catch(function() {
+      window.location.href = 'thank-you.html';
+    });
+  });
+  </script>
+  <p style="font-size:0.8rem;opacity:0.85;margin-top:12px;line-height:1.5">Referrer must be named at the time of enrollment. Retroactive claims cannot be honored. The $50 reward is issued after the referred family completes their first full month of care. Enrolled families receive a $50 tuition credit. Community referrers receive a $50 gift card. No limit on referrals.</p>
+</div>
+
 <footer class="site-footer">
   803 E. Jefferson Street, Quincy, FL 32351 &nbsp;•&nbsp;
   <a href="mailto:leadership@littlelegendsloft.com">leadership@littlelegendsloft.com</a> &nbsp;•&nbsp;
