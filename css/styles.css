@@ -23,7 +23,7 @@
 body {
   font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   color: var(--ink);
-  background: var(--cream);
+  background: linear-gradient(180deg, #A9DDF5 0%, #D3EFFC 35%, #E6F7E3 70%, #CDE9AC 100%);
   line-height: 1.6;
 }
 
@@ -68,7 +68,7 @@ body {
   content: '';
   position: absolute;
   bottom: -1px; left: 0; right: 0; height: 60px;
-  background: var(--cream);
+  background: #A8E063;
   border-radius: 50% 50% 0 0 / 100% 100% 0 0;
 }
 .rainbow-title {
