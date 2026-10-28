@@ -23,7 +23,7 @@
 body {
   font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   color: var(--ink);
-  background: var(--cream);
+  background: linear-gradient(180deg, #A9DDF5 0%, #D3EFFC 35%, #E6F7E3 70%, #CDE9AC 100%);
   line-height: 1.6;
 }
 
@@ -68,7 +68,7 @@ body {
   content: '';
   position: absolute;
   bottom: -1px; left: 0; right: 0; height: 60px;
-  background: var(--cream);
+  background: #A8E063;
   border-radius: 50% 50% 0 0 / 100% 100% 0 0;
 }
 .rainbow-title {
@@ -341,3 +341,59 @@ h1, h2, h3, .section-title, .btn {
 }
 .testimonial-card .t-name { font-weight: 800; color: var(--navy); }
 .testimonial-card .t-role { font-size: 0.9rem; color: #888; }
+
+/* ---------- MOBILE HAMBURGER NAV ---------- */
+.nav-toggle { display: none; }
+.nav-toggle-label { display: none; }
+@media (max-width: 760px) {
+  .nav-toggle-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: var(--pink);
+    box-shadow: 0 3px 0 var(--pink-dark);
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .nav-toggle-label span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    position: relative;
+  }
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+  }
+  .nav-toggle-label span::before { top: -8px; }
+  .nav-toggle-label span::after { top: 8px; }
+  .nav-pills {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 16px 4% 20px;
+    margin: 0;
+    box-shadow: 0 16px 30px rgba(26,43,87,0.18);
+    z-index: 200;
+  }
+  .nav-toggle:checked ~ .nav-pills { display: flex; }
+  .nav-toggle:checked ~ .nav-toggle-label { background: var(--pink-dark); }
+}

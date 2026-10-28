@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Join Our Legend Family | Little Legends Learning Loft</title>
 <meta name="description" content="Enroll at Little Legends Learning Loft in Quincy, FL. Simple 3-step enrollment, $50 registration fee, and current openings for Legend Mentors. Join our family today.">
-<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
-<link rel="apple-touch-icon" href="../images/apple-touch-icon.jpg">
+<link rel="icon" type="image/x-icon" href="https://legendschildcare.com/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="https://legendschildcare.com/images/favicon-32.png">
+<link rel="apple-touch-icon" href="https://legendschildcare.com/images/apple-touch-icon.jpg">
 <meta property="og:image" content="https://legendschildcare.com/images/og-thumbnail.jpg">
 <meta property="og:image:width" content="1000">
 <meta property="og:image:height" content="525">
@@ -21,7 +21,9 @@
 <body>
 
 <header class="site-header">
-  <a class="logo" href="../index.html"><img src="../images/logo-transparent.png" style="background:transparent" alt="Little Legends Learning Loft logo"></a>
+  <a class="logo" href="../index.html"><img src="https://legendschildcare.com/images/logo-transparent.png" style="background:transparent" alt="Little Legends Learning Loft logo"></a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu" tabindex="0"><span></span></label>
   <nav class="nav-pills">
     <a href="../index.html">Home</a>
     <a href="the-heart-of-the-loft.html">The Heart of the Loft</a>
@@ -35,13 +37,13 @@
 <section class="hero">
   <h1 class="rainbow-title">Join Our Legend Family</h1>
   <div class="hero-art">
-    <img src="../images/kash-waving.jpg" alt="Kash the lion cub waving hello">
+    <img src="https://legendschildcare.com/images/kash-waving.jpg" alt="Kash the lion cub waving hello">
   </div>
 </section>
 
 <section class="section">
   <h2 class="section-title">Enrollment <span class="accent-pink">is Easy</span></h2>
-  <p style="text-align:center;max-width:640px;margin:0 auto;font-size:1.1rem">Every great journey begins with a first step, and we&rsquo;re honored to be part of your child&rsquo;s. Here at the Loft, enrollment is easy:</p>
+  <p style="text-align:center;max-width:640px;margin:0 auto;font-size:1.1rem">Every great journey begins with a first step, and we&rsquo;re honored to be part of your child&rsquo;s. It&rsquo;s easy:</p>
   <div class="steps">
     <div class="step">
       <div class="num">1</div>
@@ -53,10 +55,10 @@
     </div>
     <div class="step">
       <div class="num">3</div>
-      <p>Pay the $50 registration fee to secure your spot.</p>
+      <p>Pay the $50 registration fee to complete enrollment.</p>
     </div>
   </div>
-  <p style="text-align:center;max-width:640px;margin:24px auto 0;font-style:italic;color:#555">Important: Submitting a form does not guarantee enrollment. Our team will contact you to confirm availability and discuss waitlist options if needed.</p>
+  <p style="text-align:center;max-width:640px;margin:24px auto 0;font-style:italic;color:#555">Important: Submitting a form does not guarantee enrollment. Join the interest list today — our team will contact you first when enrollment opens.</p>
   <p style="text-align:center;max-width:640px;margin:16px auto 0;font-size:1.05rem">Questions about enrollment? Email us at <a href="mailto:enrollment@littlelegendsloft.com" style="color:var(--pink-dark);font-weight:700">enrollment@littlelegendsloft.com</a></p>
 </section>
 
@@ -95,9 +97,43 @@
   </div>
   <p style="text-align:center;max-width:640px;margin:24px auto 0;font-style:italic;color:#555">Note: Applications are reviewed carefully. Submission does not guarantee employment. Qualified applicants will be contacted by our leadership team.</p>
   <div style="text-align:center">
-    <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeRWJ7Z0oCDvx9s3NTvS_79NJLibzPkmIma3DLLTPUCFODgEg/viewform" target="_blank" rel="noopener">Apply Today</a>
+    <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfEeECOso2xLIdRBXrT4ecdueRKcd7nDfP3QW9VJtN2F06xbg/viewform" target="_blank" rel="noopener">Join the Interest List</a>
   </div>
 </section>
+
+<div class="refer-promo">
+  <h2>Refer a Legend</h2>
+  <p>Know a family looking for childcare? Send them our way. When they enroll and complete their first month, you earn $50. Enrolled families get a $50 tuition credit. Grandparents, friends, and neighbors get a $50 gift card. There's no limit to how many families you can refer. Just our way of saying thank you for helping our village grow.</p>
+  <form id="refer-form" style="max-width:520px;margin:24px auto 0;text-align:left">
+    <label for="ref-your-name" style="display:block;font-weight:700;margin-bottom:4px">Your Name</label>
+    <input type="text" id="ref-your-name" name="referrer-name" required style="width:100%;padding:10px;border-radius:10px;border:2px solid #fff;margin-bottom:12px">
+    <label for="ref-your-phone" style="display:block;font-weight:700;margin-bottom:4px">Your Phone</label>
+    <input type="tel" id="ref-your-phone" name="referrer-phone" required style="width:100%;padding:10px;border-radius:10px;border:2px solid #fff;margin-bottom:12px">
+    <label for="ref-friend-name" style="display:block;font-weight:700;margin-bottom:4px">Friend's Name</label>
+    <input type="text" id="ref-friend-name" name="friend-name" required style="width:100%;padding:10px;border-radius:10px;border:2px solid #fff;margin-bottom:12px">
+    <label for="ref-friend-email" style="display:block;font-weight:700;margin-bottom:4px">Friend's Email</label>
+    <input type="email" id="ref-friend-email" name="email" required style="width:100%;padding:10px;border-radius:10px;border:2px solid #fff;margin-bottom:16px">
+    <div style="text-align:center">
+      <button type="submit" class="btn" style="border:none;cursor:pointer">Send Referral</button>
+    </div>
+  </form>
+  <script>
+  document.getElementById('refer-form').addEventListener('submit', function(ev) {
+    ev.preventDefault();
+    var form = ev.target;
+    fetch('https://script.google.com/macros/s/AKfycbysWOjmKkE1sJ8gk_jiuOg400Mg2GnmxnP1AaCpkb0e7-DQby0ADy1iXepJjhk22A8hsg/exec', {
+      method: 'POST',
+      mode: 'no-cors',
+      body: new FormData(form)
+    }).then(function() {
+      window.location.href = 'thank-you.html';
+    }).catch(function() {
+      window.location.href = 'thank-you.html';
+    });
+  });
+  </script>
+  <p style="font-size:0.8rem;opacity:0.85;margin-top:12px;line-height:1.5">Referrer must be named at the time of enrollment. Retroactive claims cannot be honored. The $50 reward is issued after the referred family completes their first full month of care. Enrolled families receive a $50 tuition credit. Community referrers receive a $50 gift card. No limit on referrals.</p>
+</div>
 
 <footer class="site-footer">
   803 E. Jefferson Street, Quincy, FL 32351 &nbsp;•&nbsp;
@@ -105,7 +141,9 @@
   850.627.4061<br>
   Mon – Fri: 6:00 AM – 6:00 PM<br>
   ©2026 Little Legends Learning Loft, Inc. All Rights Reserved.<br>
-  Part of the McMillon Global Enterprises Family of Businesses
+  Part of the McMillon Global Enterprises Family of Businesses<br>
+  A Digital Experience by Forever Young Designs<br>
+  Brand Strategy • Creative Direction • Website Design &amp; Management
 <div class="social-links">
     <a href="https://www.facebook.com/share/1BAZdCDmKt/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Follow us on Facebook" style="display:inline-block;margin:0 8px"><svg width="28" height="28" viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
     <a href="https://www.instagram.com/littlelegends_1/" target="_blank" rel="noopener" aria-label="Follow us on Instagram" style="display:inline-block;margin:0 8px"><svg width="28" height="28" viewBox="0 0 24 24" fill="#E4405F" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
